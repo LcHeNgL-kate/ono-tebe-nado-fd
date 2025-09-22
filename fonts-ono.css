@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --font-primary: sans-serif, 'Raleway';
+}
+
+/* font styles */
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cover__title {
+  font-size: 80px;
+}
+
+.lots__heading, .about__title {
+  font-size: 40px;
+}
+
+.card__title {
+  font-size: 22px;
+}
+
+/* Text styles */
+.cover__description-text {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.card__text, .about__text, .lots__look-more-link {
+  font-size: 20px;
+}
+
+.header__menu a, .footer__menu a, .header__address, .footer__address {
+  font-size: 18px;
+}
+
+.bet-button {
+  font-size: 22px;
+  text-transform: uppercase;
+}
