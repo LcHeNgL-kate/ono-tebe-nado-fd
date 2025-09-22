@@ -1,1 +1,1 @@
-https://github.com/LcHeNgL-kate/ono-tebe-nado
+https://github.com/LcHeNgL-kate/ono-tebe-nado-fd
