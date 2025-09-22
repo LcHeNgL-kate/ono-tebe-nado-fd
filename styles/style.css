@@ -52,7 +52,7 @@ header {
   display: flex;
   list-style: none;
   gap: 32px;
-  align-items: left;
+  align-items: center;
 }
 
 .header__menu a {
