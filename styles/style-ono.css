@@ -107,7 +107,7 @@ header {
 .cover {
   position: relative;
   height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/picture-ono-nado-1.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/picture-ono-nado-1.jpg');
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
@@ -236,16 +236,16 @@ header {
 }
 
 .card_type_film {
-  background-image: url('images/film-ono-nado-2.jpg');
+  background-image: url('../images/film-ono-nado-2.jpg');
 }
 
 .card_type_book {
-  background-image: url('images/book-ono-nado-3.png');
+  background-image: url('../images/book-ono-nado-3.png');
 }
 
 .card_type_picture {
 
-  background-image: url('images/picture-ono-nado-4.jpg');
+  background-image: url('../images/picture-ono-nado-4.jpg');
 }
 
 .lots__look-more-link {
