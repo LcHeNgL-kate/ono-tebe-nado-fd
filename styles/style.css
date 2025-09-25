@@ -1,333 +1,329 @@
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button {
-  font: inherit;
-}
-
+/* own styles */
+/* спасибо за perfect pixel очень помогло */
+/* часть убрано из-за глобал стилей и смены названий классов */
+/* overflow-x:hidden; убран вместе с боди */
 body {
-  font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
-  color: #000;
-  background-color: #fff;
-  max-width: 1100px;
-  margin: 0 auto;
-  line-height: 1.2;
-  overflow-x: hidden;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
-  max-width: 1052px;
+  width: 1000px;
   margin: 0 auto;
 }
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.6);
+  z-index: -1;
+}
+
+/* после смены названий и <a> на ul li менюшные штуки добавлены */
+
+.header__menu {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px 50px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.13px;
+  padding-top: 92px;
+  padding-bottom: 96px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 32px;
+}
+
+.header__links-list-item {
+  list-style-type: circle; 
+  /* добавлен спс */
+  border-bottom: 1px solid #000;
+}
+
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+  border: none;
+}
+
+.header__link-logo {
+  display: flex;
 }
 
 .header__logo {
-  font-weight: 700;
-  font-size: 40px;
   width: 148px;
   height: 105px;
-  text-transform: uppercase;
 }
 
-.header__menu ul {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-  align-items: center;
-}
+/* общий класс тоже переименован  */
 
-.header__menu a {
-  text-decoration: underline;
-  font-size: 18px;
-  color: #000;
-}
-
-.header__menu a:hover {
-  text-decoration: none;
-}
-
-.header__address {
+.address {
   font-style: normal;
-  text-align: left;
-  width:240px;
-  line-height: 24px;
-  font-size: 18px;
+  max-width: 240px;
+  line-height: 24.3px;
+  text-align: start;
+  justify-self: end;
 }
 
-.header__address a {
-  display: block;
-  color: #000;
-  text-decoration: none;
+.address a {
+  border-bottom: 1px solid #000;
 }
 
-/* Cover */
+/* header */
+/* Нет жестких ограничений высоты больше, только паддинги */
 .cover {
   position: relative;
-  height: 757px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/picture-ono-nado-1.jpg');
+  z-index: 1;
+  margin-bottom: 180px;
+  padding-top: 165px;
+  padding-bottom: 50px;
+  background-image: url(../images/picture-ono-nado-1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 40px;
-  margin-bottom: 80px;
 }
 
 .cover__title {
-  margin-bottom: 60px;
-  line-height: 1;
-  font-weight: 700;
+
+  text-transform: uppercase;
   font-size: 100px;
-}
-
-.cover__title span {
-  display: block;
-  letter-spacing: 0.05em;
-}
-
-.cover__title span:nth-child(1) {
-  text-align: left;
-}
-
-.cover__title span:nth-child(2) {
-  text-align: center;
-}
-
-.cover__title span:nth-child(3) {
-  text-align: right;
-}
-
-.cover__description {
+  font-weight: 700;
+  line-height: 115px;
+  margin-bottom: 106px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  letter-spacing: calc(1em / 10 * 3);
 }
 
-.cover__description-text {
-  margin-right: 60px;
+/* нет номеров у элементов */
+
+.aligned-text {
+  text-align: start;
+}
+
+.aligned-text_center {
+  text-align: center;
+  margin-right: -30px;
+}
+
+.aligned-text_right {
+  text-align: end;
+  margin-right: -30px;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cover__text {
+  text-align: center;
+  margin-top: 12px;
   text-transform: uppercase;
+  font-size: 22px;
   font-weight: 400;
-  font-size: 22px;
-  word-spacing: 18px;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  word-spacing: 0.85em;
 }
+/* все цвета заменены на макетный #fff */
 
-.bet-button {
-  background: transparent;
-  border: 1px solid #fff;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-  font-size: 22px;
-  padding: 12px 32px;
-  cursor: pointer;
-  transition: background 0.3s;
+.cover__bet {
   text-transform: uppercase;
-}
-
-.bet-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  font-size: 22px;
+  font-weight: 500;
+  padding: 12px 32px 11px 31px;
+  color: #fff;
+  border: 1px solid currentColor;
+  background: transparent;
 }
 
 /* Lots */
+
 .lots {
   margin-bottom: 120px;
 }
 
 .lots__heading {
-  margin-bottom: 40px;
-  padding-left: 40px;
+  text-transform: uppercase;
   font-size: 40px;
   font-weight: 700;
-  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.lots__heading {
+  margin-left: 64px;
 }
 
 .lots__card-list {
+  list-style-type: none;
   display: flex;
-  gap: 24px;
-  list-style: none;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 31px;
 }
 
+.card-link {
+  height: 100%;
+  color: #fff;
+}
+
+/* все лишние элементы убраны и теперь только классы)
+нет подклассов overlay  добавлен (сейчас 5 сверху) */
 .card {
   position: relative;
+  z-index: 1;
   width: 334px;
   min-height: 596px;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 48px 40px;
   display: flex;
   flex-direction: column;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.card__title {
-  text-decoration: underline;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 2;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.card__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-  color: rgba(255, 255, 255, 0.7);
+  justify-content: space-between;
+  margin-left: 24px;
+  padding: 48px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
-  background-image: url('../images/film-ono-nado-2.jpg');
+  background-image: url(../images/film-ono-nado-2.jpg);
 }
 
 .card_type_book {
-  background-image: url('../images/book-ono-nado-3.png');
+  background-image: url(../images/book-ono-nado-3.png);
 }
 
 .card_type_picture {
-  background-image: url('../images/picture-ono-nado-4.jpg');
+  background-image: url(../images/picture-ono-nado-4.jpg);
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.card__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
 }
 
 .lots__look-more-link {
-  color: #000;
-  text-decoration: none;
+  margin-left: 64px;
   font-size: 20px;
-  padding-left: 40px;
-  position: relative;
-}
-
-.lots__look-more-link::before {
-  content: '';
-  position: absolute;
-  left: 40px;
-  bottom: -2px;
-  width: 191px;
-  height: 1px;
-  background-color: #000;
+  font-weight: 400;
+  line-height: 23.48px;
+  border-bottom: 1px solid #000;
 }
 
 /* About */
+
 .about {
-  display: grid;
-  grid-template-columns: 334px 1fr;
-  gap: 24px;
-  margin-bottom: 120px;
+  padding: 0 24px;
+  margin-bottom: 180px;
 }
 
-.about__logo,
-.about__logo-white{
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.about__column {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 72px;
+  padding-left: 47px;
+  padding-top: 35px;
+  padding-right: 5px;
 }
 
 .about__logo {
+  width: 240px;
+  height: 240px;
   background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about__logo-ver2 {
-  background-color: #fff;
+.about__logo-image {
+  width: 148px;
+  height: 114px;
 }
 
 .about__title {
-  margin-bottom: 40px;
-  font-weight: 700;
   font-size: 40px;
+  font-weight: 700;
+  line-height: 46.96px;
   text-transform: uppercase;
+  margin-bottom: 100px;
+  margin-top: 101px;
 }
 
-.about__text p {
-  margin-bottom: 24px;
+.about__text {
   font-size: 20px;
+  font-weight: 400;
   line-height: 24px;
+  text-align: left;
+}
+
+.about__text-distance {
+  margin-bottom: 24px;
+  text-align: left;
 }
 
 /* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 50px 90px 50px;
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 82px;
 }
 
 .footer__address {
   font-style: normal;
-  line-height: 1.4;
-  font-size: 18px;
+  max-width: 265px;
+  text-align: start;
+  justify-self: start;
 }
 
-.footer__address a {
-  display: block;
-  color: #000;
-  text-decoration: none;
-  
-}
-
-.footer__menu ul {
-  list-style: none;
+.footer__menu {
   text-align: center;
+  justify-self: center;
 }
 
-.footer__menu li {
-  margin-bottom: 8px;
+.footer__menu-link {
+  border-bottom: 1px solid #000;
 }
 
-.footer__menu a {
-  color: #000;
-  font-size: 18px;
-  text-decoration: underline;
+.footer__menu-link_active {
+  border: none;
 }
 
-.footer__menu a:hover {
-  text-decoration: none;
-}
-
-.footer__social {
+.footer__social-list {
   display: flex;
   gap: 48px;
+  justify-self: end;
 }
 
 .footer__social-icon {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 48px;
+  height: 48px;
 }
