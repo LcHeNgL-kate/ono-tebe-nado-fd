@@ -24,8 +24,8 @@
         <div class="header__menu">
           <nav>
             <ul class="header__links-list">
-              <li class="header__links-list-item header__links-list-item_no-bullit">
-                <a href="#"> главная </a>
+              <li class="header__links-list-item header__links-list-item_no-bullit header__link_active">
+                <a href="#" > главная </a>
               </li>
               <li class="header__links-list-item">
                 <a href="#">посмотреть лоты</a>
@@ -35,7 +35,7 @@
               </li>
             </ul>
           </nav>
-          <a class="header__link-logo" href="#">
+          <a class="header__link-logo" role="img" aria-label="Logo-ono">
             <img class="header__logo" src="images/logo-ono.svg" alt="logo">
           </a>
           <!-- логотип с помощью src вместо href  -->
@@ -103,6 +103,7 @@
               </article>
             </a>
           </li>
+
           <li class="lots__card-list-item">
             <a class="card-link" href="#">
               <article class="card card_type_picture">
@@ -118,8 +119,22 @@
               </article>
             </a>
           </li>
-          <!-- карточки переходят на следующую строку, без отступов,
-          но в макете их и нет)) -->
+          <!-- <li class="lots__card-list-item">
+            <a class="card-link" href="#">
+              <article class="card card_type_picture">
+                <h3 class="card__title">
+                  Картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
+                <p class="card__text">
+                  Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на
+                  инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое
+                  поставили, если бы не знали, что это — одна из революционных работ Кандинского?
+                </p>
+                <div class="overlay"></div>
+              </article>
+            </a>
+          </li> -->
+          
         </ul>
         <a class="lots__look-more-link" href="#">посмотреть больше</a>
       </section>
@@ -131,7 +146,7 @@
           </div>
           <div>
             <h2 class="about__title">Об аукционе</h2>
-            <p class="about__text about__text-distance">
+            <p class="about__text">
               Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
               Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен
               дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому
