@@ -50,7 +50,7 @@ li {
 }
 
 /* два класса */
-.header__links-list-item_no-bullet {
+.header__links-list-item_no-bullit {
   list-style-type: none;
 }
 
